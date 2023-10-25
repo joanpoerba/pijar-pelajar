@@ -24,51 +24,51 @@ const Tab = () => {
     frontEnd: {
       card1: {
         title: "Design UI/UX untuk pemula hingga mahir",
-        banner: "/src/assets/figma.webp",
+        banner: "/assets/figma.webp",
         harga: "Rp150.000",
       },
       card2: {
         title: "HTML, CSS untuk JavaScript DOM untuk pemula",
-        banner: "/src/assets/vsc.webp",
+        banner: "/assets/vsc.webp",
         harga: "Rp75.000",
       },
     },
     backEnd: {
       card1: {
         title: "Membuat fitur login dan register dengan PHP dan MySql",
-        banner: "/src/assets/MySql.webp",
+        banner: "/assets/mysql.webp",
         harga: "Rp200.000",
       },
       card2: {
         title: "Berkenalan dengan NextJs, ChakraUI, ExpressJs, MongoDB",
-        banner: "/src/assets/mongodb.webp",
+        banner: "/assets/mongodb.webp",
         harga: "Rp120.000",
       },
       card3: {
         title: "Fullstack WebApp cuaca dengan DJango - Python",
-        banner: "/src/assets/python.webp",
+        banner: "/assets/python.webp",
         harga: "Rp250.000",
       },
       card4: {
         title: "Membuat dashboard admin dengan Codeigniter 3",
-        banner: "/src/assets/codeigniter.webp",
+        banner: "/assets/codeigniter.webp",
         harga: "Rp300.000",
       },
     },
     devOps: {
       card1: {
         title: "Mendeploy project dengan Cloudflare",
-        banner: "/src/assets/cloud.webp",
+        banner: "/assets/cloud.webp",
         harga: "Rp100.000",
       },
       card2: {
         title: "Mendalami Cloud computing dengan Azure",
-        banner: "/src/assets/azure.webp",
+        banner: "/assets/azure.webp",
         harga: "Rp130.000",
       },
       card3: {
         title: "Setting AWS Laravel 10 untuk Intermidate",
-        banner: "/src/assets/amazon.webp",
+        banner: "/assets/amazon.webp",
         harga: "Rp230.000",
       },
     },

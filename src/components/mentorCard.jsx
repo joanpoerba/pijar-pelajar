@@ -3,14 +3,14 @@ const MentorCard = () => {
     {
       nama: "Braja Reysandi",
       jabatan: "Master Back End",
-      foto: "/src/assets/braja.JPG",
+      foto: "/assets/braja.JPG",
       quote:
         "Ada yang mau jadi back end engineer tapi gatau jalur belajar? santai bro, jaman sekarang banyak bootcamp, kaya pijar pelajar contoh nya. Daftar, belajar, abis itu kerja. Kurang santai apa coba hahaha.",
     },
     {
       nama: "Nadia",
       jabatan: "Master UI/UX",
-      foto: "/src/assets/nadia.JPG",
+      foto: "/assets/nadia.jpg",
       quote:
         "HA HA HA (ketawa jahat). Mau bootcamp yang berkualitas industri dan terjangkau harganya? Pijar Pelajar dong! modal 300k dapat pake belajar digital yang relevan tentunya",
     },

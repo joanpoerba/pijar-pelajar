@@ -247,7 +247,7 @@ const Home = () => {
         <section className="2xl:w-[1400px] xl:w-[1100px] lg:w-[900px] md:w-[700px] flex lg:flex-row flex-col justify-around items-center">
           <img
             className="2xl:w-[450px] lg:w-[380px] md:w-[470px] w-[430px]"
-            src="/src/assets/model.png"
+            src="/assets/model.png"
             alt=""
           />
           <div className="text-white flex flex-col gap-y-6 lg:mt-0 mt-10">
@@ -294,7 +294,7 @@ const Home = () => {
         <section className="promoWrapper 2xl:w-[1400px] xl:w-[1100px] lg:w-[900px] md:w-[750px] w-[750px] flex lg:justify-between sm:flex-row es:flex-col justify-around items-center es:gap-y-10">
           <img
             className="xl:w-[160px] lg:w-[130px] md:w-[140px] w-[100px] sm:block es:hidden"
-            src="/src/assets/promo.png"
+            src="/assets/promo.png"
             alt=""
           />
           <div className="flex flex-col sm:items-start es:items-center lg:gap-y-5 md:gap-y-2 gap-y-1 text-white">
@@ -340,12 +340,12 @@ const Home = () => {
           <Faq />
         </section>
       </main>
-      <main className="w-full h-[600px] md:flex justify-center sm:hidden">
+      <main className="w-full h-[600px] md:flex hidden justify-center">
         <section className="2xl:w-[1400px] xl:w-[1100px] lg:w-[900px] md:w-[700px] sm:w-[650px] w-full flex justify-center">
           <Carousel className="w-[1200px]">
-            <img className="p-3" alt="..." src="/src/assets/banner1.png" />
-            <img className="p-3" alt="..." src="/src/assets/banner2.png" />
-            <img className="p-3" alt="..." src="/src/assets/banner3.png" />
+            <img className="p-3" alt="..." src="/assets/banner1.png" />
+            <img className="p-3" alt="..." src="/assets/banner2.png" />
+            <img className="p-3" alt="..." src="/assets/banner3.png" />
           </Carousel>
         </section>
       </main>

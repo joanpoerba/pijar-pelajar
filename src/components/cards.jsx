@@ -3,7 +3,7 @@ import { Card } from "flowbite-react";
 const ReasonCard = () => {
   return (
     <>
-      <Card imgSrc="/src/assets/sustainable.jpg" className="2xl:w-96 xl:w-80 lg:w-96 md:w-96 sm:w-96 w-96 es:w-full sm:h-[460px] es:h-auto border-0">
+      <Card imgSrc="/assets/sustainable.jpg" className="2xl:w-96 xl:w-80 lg:w-96 md:w-96 sm:w-96 w-96 es:w-full sm:h-[460px] es:h-auto border-0">
         <h5 className="sm:text-2xl es:text-lg font-bold tracking-tight text-slate-700 dark:text-white">
           Relevan dengan apa yang dibutuhkan dunia{" "}
           <span className="customUnderline3">industri</span>
@@ -14,7 +14,7 @@ const ReasonCard = () => {
           <span className="customUnderline3">industri</span>
         </p>
       </Card>
-      <Card imgSrc="/src/assets/hired.jpg" className="2xl:w-96 xl:w-80 lg:w-96 md:w-96 sm:w-96 w-96 es:w-full sm:h-[460px] es:h-auto border-0">
+      <Card imgSrc="/assets/hired.jpg" className="2xl:w-96 xl:w-80 lg:w-96 md:w-96 sm:w-96 w-96 es:w-full sm:h-[460px] es:h-auto border-0">
         <h5 className="sm:text-2xl es:text-lg font-bold tracking-tight text-slate-700 dark:text-white">
           Dijamin mendapat pekerjaan ketika sudah lulus
         </h5>
@@ -23,7 +23,7 @@ const ReasonCard = () => {
           <span className="customUnderline3">Pijar Pelajar?</span> agar dapat menempu dunia industri secepat-cepatnya.
         </p>
       </Card>
-      <Card imgSrc="/src/assets/seekingJob.jpg" className="2xl:w-96 xl:w-80 lg:w-96 md:w-96 sm:w-96 w-96 es:w-full sm:h-[460px] es:h-auto border-0">
+      <Card imgSrc="/assets/seekingJob.jpg" className="2xl:w-96 xl:w-80 lg:w-96 md:w-96 sm:w-96 w-96 es:w-full sm:h-[460px] es:h-auto border-0">
         <h5 className="sm:text-2xl es:text-lg font-bold tracking-tight text-slate-700 dark:text-white">
           Mendapat dukungan karir{" "}
           <span className="customUnderline3">seumur hidup</span>
