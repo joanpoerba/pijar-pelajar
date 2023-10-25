@@ -1,0 +1,57 @@
+@import url('https://fonts.cdnfonts.com/css/tt-norms-pro');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'TT Norms Pro', sans-serif;
+  scroll-behavior: smooth !important;
+}
+
+#home {
+  background-image: url('assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.customUnderline {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #bdd2ff 50%);
+}
+
+.customUnderline2 {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #4f87ff 50%);
+}
+
+.customUnderline3 {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #ceddff 50%);
+}
+
+.customUnderline4 {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #7893ff 50%);
+}
+
+.customUnderline5 {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #93a9ff 50%);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #256eff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4684ff;
+}
