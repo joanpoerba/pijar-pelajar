@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Modal, Textarea, Label, TextInput } from "flowbite-react";
 import Hamburger from "hamburger-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [openModal, setOpenModal] = useState();
@@ -51,12 +52,20 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <Button
-          onClick={() => props.setOpenModal("default")}
-          className="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-600 hover:to-blue-600 px-4 rounded-full font-semibold text-white border-0 focus:ring-0"
-        >
-          Get In Touch
-        </Button>
+        <div className="flex gap-x-5">
+          <button
+            onClick={() => props.setOpenModal("default")}
+            className="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-600 hover:to-blue-600 px-4 rounded-full font-medium text-white border-0 focus:ring-0 py-2"
+          >
+            Get In Touch
+          </button>
+          <Link
+            to="/login"
+            className="bg-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 px-4 rounded-full font-medium text-blue-600 hover:text-white border-[1px] border-blue-600 hover:border-white focus:ring-0 py-2"
+          >
+            Masuk
+          </Link>
+        </div>
       </section>
       <div
         className={`w-full lg:hidden flex flex-row justify-between items-center py-2 bg-white z-10 px-8 es:px-3 ${

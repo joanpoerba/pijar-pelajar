@@ -14,6 +14,11 @@ export default {
       xl: "1280px",
       "2xl": "1536px",
     },
+    extend: {
+      backgroundImage: {
+        "loginBanner": "url('/assets/loginBanner.png')",
+      },
+    },
   },
   plugins: [require("flowbite/plugin")],
 };
