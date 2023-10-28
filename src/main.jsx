@@ -4,27 +4,30 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import Home from "./pages/home";
+import Course from "./pages/course";
 
 const Router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: <Login/>
   },
   {
     path: "/login",
     element: <Login />,
-    errorElement: <Login/>
+    errorElement: <Login />,
   },
   {
     path: "/register",
     element: <Register />,
-    errorElement: <Login/>
+    errorElement: <Login />,
+  },
+  {
+    path: "/course",
+    element: <Course />,
+    errorElement: <Login />,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={Router} />
-  </React.StrictMode>
+  <RouterProvider router={Router} />
 );

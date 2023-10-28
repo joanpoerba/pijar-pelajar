@@ -148,9 +148,9 @@ const Home = () => {
             <span className="customUnderline">modern</span>.
           </p>
           <div className="flex flex-row justify-center items-center mt-3">
-            <button className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-full py-2 px-6 md:text-[18px] es:text-[12px] font-semibold text-white shadow-xl shadow-blue-200">
+            <a href="#courses" className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-full py-2 px-6 md:text-[18px] es:text-[12px] font-semibold text-white shadow-xl shadow-blue-200">
               Enroll course now
-            </button>
+            </a>
           </div>
         </div>
       </main>

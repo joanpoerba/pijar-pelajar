@@ -40,12 +40,12 @@ const Login = () => {
 
   return (
     <div id="login" className="w-full h-screen grid grid-cols-12">
-      <div className="col-span-5 h-screen bg-[url('/assets/loginBanner.png')] bg-cover bg-center bg-no-repeat"></div>
-      <div className="col-span-7 h-screen bg-gradient-to-br from-blue-500 to-blue-950 flex justify-center items-center">
-        <div className="w-1/2 flex flex-col gap-y-10">
+      <div className="col-span-5 h-screen bg-[url('/assets/loginBanner.png')] bg-cover bg-center bg-no-repeat hidden md:block"></div>
+      <div className="col-span-12 md:col-span-7 h-screen bg-gradient-to-br from-blue-500 to-blue-950 flex justify-center items-center">
+        <div className="w-full md:w-96 lg:w-1/2 flex flex-col gap-y-10 px-3">
           <div className="flex flex-col gap-y-2">
-            <p className="text-4xl text-white font-bold">Pijar Pelajar</p>
-            <p className="text-xl text-white font-normal">
+            <p className="text-3xl md:text-4xl text-white font-bold">Pijar Pelajar</p>
+            <p className="text-md text-white font-normal">
               Selamat datang kembali, silahkan login terlebih dahulu
             </p>
           </div>
@@ -83,14 +83,19 @@ const Login = () => {
               </li>
               <li>
                 <Flowbite theme={{ theme: customTheme }}>
-                  <Button className="w-full" color="blue">
-                    Sign in
-                  </Button>
+                  <Link to="/">
+                    <Button className="w-full" color="blue">
+                      Sign in
+                    </Button>
+                  </Link>
                 </Flowbite>
               </li>
               <li>
                 <p className="text-white">
-                  Belum punya akun? <Link to="/register" className="font-medium">Daftar</Link>
+                  Belum punya akun?{" "}
+                  <Link to="/register" className="font-medium">
+                    Daftar
+                  </Link>
                 </p>
               </li>
             </ul>

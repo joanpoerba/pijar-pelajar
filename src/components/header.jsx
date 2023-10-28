@@ -101,7 +101,7 @@ const Header = () => {
       >
         <div></div>
         <nav className="w-full px-10">
-          <ul className="flex flex-col items-center gap-y-8">
+          <ul className="flex flex-col items-center gap-y-4">
             <li className="">
               <a
                 href="#courses"
@@ -136,6 +136,13 @@ const Header = () => {
               >
                 Get In Touch
               </Button>
+            </li>
+            <li className="w-full">
+              <Link to="/login">
+                <Button className="w-full bg-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 px-4 rounded-full font-medium text-blue-600 hover:text-white border-[1px] border-blue-600 hover:border-white focus:ring-0">
+                  Masuk
+                </Button>
+              </Link>
             </li>
           </ul>
         </nav>

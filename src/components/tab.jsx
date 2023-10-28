@@ -2,6 +2,8 @@ import { Tabs, Flowbite } from "flowbite-react";
 import { Card } from "flowbite-react";
 import { BsFillStarFill } from "react-icons/bs";
 
+import { Link } from "react-router-dom";
+
 const Tab = () => {
   const customTheme = {
     tab: {
@@ -22,51 +24,60 @@ const Tab = () => {
 
   const courses = {
     frontEnd: {
-      card1: {
+      design_uiux_untuk_pemula_hingga_mahir: {
+        id: "design_uiux_untuk_pemula_hingga_mahir",
         title: "Design UI/UX untuk pemula hingga mahir",
         banner: "/assets/figma.webp",
         harga: "Rp150.000",
       },
-      card2: {
-        title: "HTML, CSS untuk JavaScript DOM untuk pemula",
+      html_css_dan_js_dom_untuk_pemula: {
+        id: "html_css_dan_js_dom_untuk_pemula",
+        title: "HTML, CSS dan JavaScript DOM untuk pemula",
         banner: "/assets/vsc.webp",
         harga: "Rp75.000",
       },
     },
     backEnd: {
-      card1: {
+      membuat_fitur_login_dan_register_dengan_php_dan_mysql: {
+        id: "membuat_fitur_login_dan_register_dengan_php_dan_mysql",
         title: "Membuat fitur login dan register dengan PHP dan MySql",
         banner: "/assets/mysql.webp",
         harga: "Rp200.000",
       },
-      card2: {
+      berkenalan_dengan_nextjs_chakraui_expressjs_mongodb: {
+        id: "berkenalan_dengan_nextjs_chakraui_expressjs_mongodb",
         title: "Berkenalan dengan NextJs, ChakraUI, ExpressJs, MongoDB",
         banner: "/assets/mongodb.webp",
         harga: "Rp120.000",
       },
-      card3: {
+      fullstack_webapp_cuaca_dengan_django_python: {
+        id: "fullstack_webapp_cuaca_dengan_django_python",
         title: "Fullstack WebApp cuaca dengan DJango - Python",
         banner: "/assets/python.webp",
         harga: "Rp250.000",
       },
-      card4: {
+      membuat_dashboard_admin_dengan_codeigniter_3: {
+        id: "membuat_dashboard_admin_dengan_codeigniter_3",
         title: "Membuat dashboard admin dengan Codeigniter 3",
         banner: "/assets/codeigniter.webp",
         harga: "Rp300.000",
       },
     },
     devOps: {
-      card1: {
+      mendeploy_project_dengan_cloudflare: {
+        id: "mendeploy_project_dengan_cloudflare",
         title: "Mendeploy project dengan Cloudflare",
         banner: "/assets/cloud.webp",
         harga: "Rp100.000",
       },
-      card2: {
+      mendalami_cloud_computing_dengan_azure: {
+        id: "mendalami_cloud_computing_dengan_azure",
         title: "Mendalami Cloud computing dengan Azure",
         banner: "/assets/azure.webp",
         harga: "Rp130.000",
       },
-      card3: {
+      setting_aws_laravel_10_untuk_intermidate: {
+        id: "setting_aws_laravel_10_untuk_intermidate",
         title: "Setting AWS Laravel 10 untuk Intermidate",
         banner: "/assets/amazon.webp",
         harga: "Rp230.000",
@@ -109,12 +120,12 @@ const Tab = () => {
                     <span className="sm:text-2xl es:text-lg font-bold text-gray-900 dark:text-white">
                       {courses.frontEnd[element].harga}
                     </span>
-                    <a
+                    <Link
                       className="rounded-lg bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
-                      href="#"
+                      to={`/course?frontEnd?${courses.frontEnd[element].id}`}
                     >
                       <p>Enroll</p>
-                    </a>
+                    </Link>
                   </div>
                 </Card>
               ))}
@@ -147,12 +158,12 @@ const Tab = () => {
                     <span className="sm:text-2xl es:text-lg font-bold text-gray-900 dark:text-white">
                       {courses.backEnd[element].harga}
                     </span>
-                    <a
+                    <Link
                       className="rounded-lg bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
-                      href="#"
+                      to={`/course?backEnd?${courses.backEnd[element].id}`}
                     >
                       <p>Enroll</p>
-                    </a>
+                    </Link>
                   </div>
                 </Card>
               ))}
@@ -185,12 +196,12 @@ const Tab = () => {
                     <span className="sm:text-2xl es:text-lg font-bold text-gray-900 dark:text-white">
                       {courses.devOps[element].harga}
                     </span>
-                    <a
+                    <Link
                       className="rounded-lg bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
-                      href="#"
+                      to={`/course?devOps?${courses.devOps[element].id}`}
                     >
                       <p>Enroll</p>
-                    </a>
+                    </Link>
                   </div>
                 </Card>
               ))}
