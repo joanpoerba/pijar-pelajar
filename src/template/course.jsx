@@ -1,11 +1,11 @@
-const course = () => {
-  const [title, tanggalRilis, deskripsi] = props;
+// const course = () => {
+//   const [title, tanggalRilis, deskripsi] = props;
 
-  return (
-    <>
-      <h1>joan</h1>
-    </>
-  )
-}
+//   return (
+//     <>
+//       <h1>joan</h1>
+//     </>
+//   )
+// }
 
-export default course;
+// export default course;

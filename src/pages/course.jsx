@@ -1,4 +1,4 @@
-import { Course } from '../template/course';
+// import { Course } from '../template/course';
 
 const course = () => {
   const courses = {
