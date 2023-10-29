@@ -7,20 +7,24 @@ import { Link } from "react-router-dom";
 const Tab = () => {
   const customTheme = {
     tab: {
+      base: "flex flex-col gap-1",
       tablist: {
         tabitem: {
           base: "flex items-center justify-center p-4 rounded-t-lg text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-gray-400 disabled:dark:text-gray-500 focus:ring-4 focus:ring-blue-300 focus:outline-none",
           styles: {
             pills: {
               active: {
-                on: "bg-blue-600 text-white",
+                on: "bg-blue-600 text-white ring-4 ring-blue-300",
               },
             },
           },
         },
       },
+      tabpanel: "p-5 bg-blue-300 rounded-md"
     },
   };
+
+  
 
   const courses = {
     frontEnd: {
@@ -99,7 +103,7 @@ const Tab = () => {
                 <Card
                   key={key}
                   imgSrc={courses.frontEnd[element].banner}
-                  className="2xl:col-span-3 xl:col-span-4 lg:col-span-5 md:col-span-6 sm:col-span-7 w-96 es:w-full"
+                  className="2xl:col-span-3 xl:col-span-4 lg:col-span-5 md:col-span-6 sm:col-span-7 w-96 es:w-full border-0"
                 >
                   <a href="#">
                     <h5 className="sm:text-xl es:text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
@@ -124,7 +128,7 @@ const Tab = () => {
                       className="rounded-lg bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                       to={`/course?frontEnd?${courses.frontEnd[element].id}`}
                     >
-                      <p>Enroll</p>
+                      <p>Lihat</p>
                     </Link>
                   </div>
                 </Card>
@@ -137,7 +141,7 @@ const Tab = () => {
                 <Card
                   key={key}
                   imgSrc={courses.backEnd[element].banner}
-                  className="2xl:col-span-3 xl:col-span-4 lg:col-span-5 md:col-span-6 sm:col-span-7 w-96 es:w-full"
+                  className="2xl:col-span-3 xl:col-span-4 lg:col-span-5 md:col-span-6 sm:col-span-7 w-96 es:w-full border-0"
                 >
                   <a href="#">
                     <h5 className="sm:text-xl es:text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
@@ -162,7 +166,7 @@ const Tab = () => {
                       className="rounded-lg bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                       to={`/course?backEnd?${courses.backEnd[element].id}`}
                     >
-                      <p>Enroll</p>
+                      <p>Lihat</p>
                     </Link>
                   </div>
                 </Card>
@@ -175,7 +179,7 @@ const Tab = () => {
                 <Card
                   key={key}
                   imgSrc={courses.devOps[element].banner}
-                  className="2xl:col-span-3 xl:col-span-4 lg:col-span-5 md:col-span-6 sm:col-span-7 w-96 es:w-full"
+                  className="2xl:col-span-3 xl:col-span-4 lg:col-span-5 md:col-span-6 sm:col-span-7 w-96 es:w-full border-0"
                 >
                   <a href="#">
                     <h5 className="sm:text-xl es:text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
@@ -200,7 +204,7 @@ const Tab = () => {
                       className="rounded-lg bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                       to={`/course?devOps?${courses.devOps[element].id}`}
                     >
-                      <p>Enroll</p>
+                      <p>Lihat</p>
                     </Link>
                   </div>
                 </Card>

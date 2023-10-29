@@ -82,6 +82,7 @@ const Header = () => {
           </span>
         </a>
         <Hamburger
+          size={26}
           onToggle={(toggled) => {
             if (toggled) {
               setNavbarStatus(true);

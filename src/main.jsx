@@ -9,6 +9,7 @@ const Router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <Login />,
   },
   {
     path: "/login",
