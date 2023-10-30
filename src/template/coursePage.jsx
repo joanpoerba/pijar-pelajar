@@ -8,62 +8,62 @@ import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
 
 const CoursePage = ({ title, release, link, deskripsi, tools }) => {
-  // const driverObj = driver({
-  //   showProgress: true,
-  //   steps: [
-  //     {
-  //       popover: {
-  //         title: "Mohon dipahami",
-  //       },
-  //     },
-  //     {
-  //       element: "#releaseDate",
-  //       popover: {
-  //         title: "Release date",
-  //         description: "Bulan rilis nya course ini",
-  //         side: "left",
-  //         align: "start",
-  //       },
-  //     },
-  //     {
-  //       element: "#benefit",
-  //       popover: {
-  //         title: "Benefit",
-  //         description:
-  //           "Sertifikat, Video materi, Module, Konsultasi, merupakan benefit yang akan kamu dapatkan",
-  //         side: "bottom",
-  //         align: "start",
-  //       },
-  //     },
-  //     {
-  //       element: "#video",
-  //       popover: {
-  //         title: "Video Trailer",
-  //         description:
-  //           "Tonton video trailer untuk course ini sebagai perkenalan",
-  //         side: "bottom",
-  //         align: "start",
-  //       },
-  //     },
-  //     {
-  //       element: "#materi",
-  //       popover: {
-  //         title: "Materi",
-  //         description:
-  //           "Merupakan video materi yang akan kamu pelajari selama mengambil course",
-  //         side: "left",
-  //         align: "start",
-  //       },
-  //     },
-  //     {
-  //       popover: {
-  //         title: "Terimakasih, selamat belajar",
-  //       },
-  //     },
-  //   ],
-  // });
+  const driverObj = driver({
+    showProgress: true,
+    steps: [
+      {
+        popover: {
+          title: "Mohon dipahami",
+        },
+      },
+      {
+        element: "#releaseDate",
+        popover: {
+          title: "Release date",
+          description: "Bulan rilis nya course ini",
+          side: "left",
+          align: "start",
+        },
+      },
+      {
+        element: "#benefit",
+        popover: {
+          title: "Benefit",
+          description:
+            "Sertifikat, Video materi, Module, Konsultasi, merupakan benefit yang akan kamu dapatkan",
+          side: "bottom",
+          align: "start",
+        },
+      },
+      {
+        element: "#video",
+        popover: {
+          title: "Video Trailer",
+          description:
+            "Tonton video trailer untuk course ini sebagai perkenalan",
+          side: "bottom",
+          align: "start",
+        },
+      },
+      {
+        element: "#materi",
+        popover: {
+          title: "Materi",
+          description:
+            "Merupakan video materi yang akan kamu pelajari selama mengambil course",
+          side: "left",
+          align: "start",
+        },
+      },
+      {
+        popover: {
+          title: "Terimakasih, selamat belajar",
+        },
+      },
+    ],
+  });
 
-  // driverObj.drive();
+  driverObj.drive();
 
   return (
     <>
@@ -86,27 +86,27 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
             </p>
             <div
               id="benefit"
-              className="w-full md:flex hidden flex-row justify-evenly items-center mt-16"
+              className="w-full flex flex-row flex-wrap md:justify-evenly justify-between items-center mt-16"
             >
-              <p className="text-xl flex flex-col items-center gap-y-3">
+              <p className="md:text-xl text-sm flex flex-col items-center gap-y-3">
                 Sertifikat
                 <span>
                   <BiCheckCircle className="text-blue-600 w-6 h-6" />
                 </span>
               </p>
-              <p className="text-xl flex flex-col items-center gap-y-3">
+              <p className="md:text-xl text-sm flex flex-col items-center gap-y-3">
                 Video Materi
                 <span>
                   <BiCheckCircle className="text-blue-600 w-6 h-6" />
                 </span>
               </p>
-              <p className="text-xl flex flex-col items-center gap-y-3">
+              <p className="md:text-xl text-sm flex flex-col items-center gap-y-3">
                 Module
                 <span>
                   <BiCheckCircle className="text-blue-600 w-6 h-6" />
                 </span>
               </p>
-              <p className="text-xl flex flex-col items-center gap-y-3">
+              <p className="md:text-xl text-sm flex flex-col items-center gap-y-3">
                 Konsultasi
                 <span>
                   <BiCheckCircle className="text-blue-600 w-6 h-6" />
