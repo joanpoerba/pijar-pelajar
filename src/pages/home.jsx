@@ -122,7 +122,7 @@ const Home = () => {
         className="w-full h-[800px] flex flex-col pt-44 items-center gap-y-28 es:px-1"
       >
         <p className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-md py-2 px-3 sm:text-[18px] es:text-[11px] font-semibold text-white shadow-xl shadow-blue-200">
-          Diskon 35% buat kamu yang masih pelajar SMP!
+          Bg Theo Anti Php!
         </p>
         <div className="flex flex-col items-center text-center gap-y-5 font-black">
           <TypeAnimation
