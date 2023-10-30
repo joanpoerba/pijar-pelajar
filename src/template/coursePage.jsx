@@ -8,75 +8,85 @@ import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
 
 const CoursePage = ({ title, release, link, deskripsi, tools }) => {
-  const driverObj = driver({
-    showProgress: true,
-    steps: [
-      {
-        element: "#releaseDate",
-        popover: {
-          title: "Release date",
-          description: "Bulan rilis nya course ini",
-          side: "left",
-          align: "start",
-        },
-      },
-      {
-        element: "#benefit",
-        popover: {
-          title: "Benefit",
-          description:
-            "Sertifikat, Video materi, Module, Konsultasi, merupakan benefit yang akan kamu dapatkan",
-          side: "bottom",
-          align: "start",
-        },
-      },
-      {
-        element: "#video",
-        popover: {
-          title: "Video Trailer",
-          description:
-            "Tonton video trailer untuk course ini sebagai perkenalan",
-          side: "bottom",
-          align: "start",
-        },
-      },
-      {
-        element: "#materi",
-        popover: {
-          title: "Materi",
-          description:
-            "Merupakan video materi yang akan kamu pelajari selama mengambil course",
-          side: "left",
-          align: "start",
-        },
-      },
-    ],
-  });
+  // const driverObj = driver({
+  //   showProgress: true,
+  //   steps: [
+  //     {
+  //       popover: {
+  //         title: "Mohon dipahami",
+  //       },
+  //     },
+  //     {
+  //       element: "#releaseDate",
+  //       popover: {
+  //         title: "Release date",
+  //         description: "Bulan rilis nya course ini",
+  //         side: "left",
+  //         align: "start",
+  //       },
+  //     },
+  //     {
+  //       element: "#benefit",
+  //       popover: {
+  //         title: "Benefit",
+  //         description:
+  //           "Sertifikat, Video materi, Module, Konsultasi, merupakan benefit yang akan kamu dapatkan",
+  //         side: "bottom",
+  //         align: "start",
+  //       },
+  //     },
+  //     {
+  //       element: "#video",
+  //       popover: {
+  //         title: "Video Trailer",
+  //         description:
+  //           "Tonton video trailer untuk course ini sebagai perkenalan",
+  //         side: "bottom",
+  //         align: "start",
+  //       },
+  //     },
+  //     {
+  //       element: "#materi",
+  //       popover: {
+  //         title: "Materi",
+  //         description:
+  //           "Merupakan video materi yang akan kamu pelajari selama mengambil course",
+  //         side: "left",
+  //         align: "start",
+  //       },
+  //     },
+  //     {
+  //       popover: {
+  //         title: "Terimakasih, selamat belajar",
+  //       },
+  //     },
+  //   ],
+  // });
 
-  driverObj.drive();
+  // driverObj.drive();
 
   return (
     <>
-      <div className="w-full p-8">
-        <Link className="fixed" to="/">
+      <div className="w-full sm:p-8 p-2">
+        <Link className="absolute" to="/">
           <BsX className="w-10 h-10 text-slate-700" />
         </Link>
-        <main className="flex justify-center py-20 pb-96">
+        <main className="flex justify-center py-20 sm:pb-96">
           <section className="w-[1200px] flex flex-col items-center">
-            <p className="text-3xl font-bold text-slate-700 text-center">
+            <p className="sm:text-3xl text-xl font-bold text-slate-700 text-center">
               Kelas online : <br />{" "}
               <span className="customUnderline">{title}</span>
             </p>
             <p
               id="releaseDate"
-              className="text-xl flex items-center gap-x-3 mt-8"
+              className="sm:text-xl text-md flex items-center gap-x-3 mt-8"
             >
               <ImCalendar />
               Release date {release} 2023
             </p>
             <div
               id="benefit"
-              className="w-full flex flex-row justify-evenly items-center mt-16"
+              className="w-full md:flex hidden flex-row justify-evenly items-center mt-16"
             >
               <p className="text-xl flex flex-col items-center gap-y-3">
                 Sertifikat
@@ -103,25 +113,25 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
                 </span>
               </p>
             </div>
-            <div className="w-full grid grid-cols-12 gap-x-10 mt-24">
-              <div className="col-span-8 h-[500px]">
+            <div className="w-full grid grid-cols-12 lg:gap-x-10 gap-y-16 md:mt-24 mt-10">
+              <div className="lg:col-span-8 col-span-12">
                 <iframe
                   id="video"
-                  className="w-full h-full rounded-md shadow-md"
+                  className="w-full lg:h-[500px] md:h-[500px] sm:h-[400px] es:h-[230px] rounded-md shadow-md"
                   src={link}
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 ></iframe>
-                <p className="mt-10 font-bold text-slate-700 text-2xl">
+                <p className="mt-10 font-bold text-slate-700 sm:text-2xl text-lg">
                   {title}?
                 </p>
-                <p className="mt-3 text-[18px]">{deskripsi}</p>
+                <p className="mt-3 sm:text-[18px] text-md">{deskripsi}</p>
               </div>
-              <div className="col-span-4 h-[500px]">
+              <div className="lg:col-span-4 md:col-span-7 col-span-12">
                 <div
                   id="materi"
-                  className="h-full bg-blue-600 rounded-md shadow-md flex flex-col justify-between p-5"
+                  className="h-[500px] bg-blue-600 rounded-md shadow-md flex flex-col justify-between p-5"
                 >
                   <div>
                     <p className="text-xl text-white font-medium">
@@ -135,9 +145,9 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
                         >
                           <div className="flex items-center gap-x-2">
                             <AiFillPlayCircle className="text-3xl text-blue-600" />
-                            <span>Welcome</span>
+                            <span className="lg:text-md text-sm">Welcome</span>
                           </div>
-                          <span>8 mins</span>
+                          <span className="lg:text-md text-sm">8 mins</span>
                         </a>
                       </li>
                       <li className="bg-white rounded-full p-2 pr-3">
@@ -147,9 +157,9 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
                         >
                           <div className="flex items-center gap-x-2">
                             <AiFillPlayCircle className="text-3xl text-blue-600" />
-                            <span>Pengenalan Kelas</span>
+                            <span className="lg:text-md text-sm">Pengenalan Kelas</span>
                           </div>
-                          <span>12 mins</span>
+                          <span className="lg:text-md text-sm">12 mins</span>
                         </a>
                       </li>
                       <li className="bg-white rounded-full p-2 pr-3">
@@ -159,9 +169,9 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
                         >
                           <div className="flex items-center gap-x-2">
                             <AiFillPlayCircle className="text-3xl text-blue-600" />
-                            <span>Prepare Tools</span>
+                            <span className="lg:text-md text-sm">Prepare Tools</span>
                           </div>
-                          <span>22 mins</span>
+                          <span className="lg:text-md text-sm">22 mins</span>
                         </a>
                       </li>
                       <li className="bg-white rounded-full p-2 pr-3">
@@ -171,7 +181,7 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
                         >
                           <div className="flex items-center gap-x-2">
                             <AiFillPlayCircle className="text-3xl text-blue-600" />
-                            <span>54 video lainnya</span>
+                            <span className="lg:text-md text-sm">54 video lainnya</span>
                           </div>
                         </a>
                       </li>
@@ -189,11 +199,11 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
                       className="flex items-center gap-x-5 bg-blue-200 p-5 rounded-md mt-3"
                     >
                       <img
-                        className="w-12 drop-shadow-lg"
+                        className="sm:w-12 w-9 sm:h-12 h-9 drop-shadow-lg object-contain"
                         src={tools[img][1]}
                         alt=""
                       />
-                      <p className="text-xl font-medium text-slate-900">
+                      <p className="sm:text-xl text-md font-medium text-slate-900">
                         {tools[img][0]}
                       </p>
                     </div>
