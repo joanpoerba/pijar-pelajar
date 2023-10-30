@@ -16,7 +16,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        "loginBanner": "url('/assets/loginBanner.png')",
+        loginBanner: "url('/assets/loginBanner.png')",
       },
     },
   },

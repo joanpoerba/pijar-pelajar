@@ -24,8 +24,6 @@ const Tab = () => {
     },
   };
 
-  
-
   const courses = {
     frontEnd: {
       design_uiux_untuk_pemula_hingga_mahir: {
