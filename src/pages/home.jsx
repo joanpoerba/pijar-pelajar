@@ -25,6 +25,8 @@ import Faq from "../components/faq";
 
 import { Link } from "react-router-dom";
 
+import "react-toastify/dist/ReactToastify.css";
+
 const Home = () => {
   const [scroll, scrollValue] = useState(0);
   const [promoStatus, setPromoStatus] = useState(true);
@@ -106,7 +108,7 @@ const Home = () => {
             <p className="text-white font-normal sm:text-[16px] es:text-[12px]">
               Happy Valentine&apos;s! Dapatkan <b>Diskon 20%</b> dengan code
               <b className="sm:text-[13px] es:text-[10px] text-blue-600 bg-white p-1 rounded-sm ms-1">
-                ILOVEMYGF
+                ILOVEVALENTINE
               </b>
             </p>
             <BsX
@@ -319,7 +321,7 @@ const Home = () => {
             <p className="md:text-xl lg:text-2xl 2xl:text-2xl font-bold">
               Dapatkan dengan code{" "}
               <span className="text-sm 2xl:text-lg bg-white p-2 text-blue-600 rounded-md">
-                ILOVEMYGF
+                ILOVEVALENTINE
               </span>
             </p>
           </div>
@@ -356,7 +358,6 @@ const Home = () => {
         <section className="2xl:w-[1400px] xl:w-[1100px] lg:w-[900px] md:w-[700px] sm:w-[650px] w-full flex justify-center">
           <Carousel className="w-[1200px]">
             <img className="p-3" alt="..." src="/assets/banner1.png" />
-            <img className="p-3" alt="..." src="/assets/banner2.png" />
             <img className="p-3" alt="..." src="/assets/banner3.png" />
           </Carousel>
         </section>

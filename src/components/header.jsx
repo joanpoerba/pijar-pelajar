@@ -3,11 +3,15 @@ import { Button, Modal, Textarea, Label, TextInput } from "flowbite-react";
 import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
 
+import { ToastContainer, toast } from "react-toastify";
+
 const Header = () => {
   const [openModal, setOpenModal] = useState();
   const props = { openModal, setOpenModal };
   const [isOpen, setOpen] = useState(false);
   const [navbarStatus, setNavbarStatus] = useState(false);
+
+  const notify = () => toast.success("Pesan anda sudah terkirim!");
 
   return (
     <>
@@ -163,7 +167,6 @@ const Header = () => {
                 <TextInput
                   id="email2"
                   placeholder="example@gmail.com"
-                  required
                   shadow
                   type="email"
                   autoComplete="off"
@@ -177,16 +180,17 @@ const Header = () => {
                   className="resize-none focus:border-blue-600"
                   id="comment"
                   placeholder="Leave a comment..."
-                  required
                   rows={4}
                 />
               </div>
-              <Button
-                className="mt-5 bg-blue-600 enabled:hover:bg-blue-700"
+              <a
+                className="mt-5 bg-blue-600 enabled:hover:bg-blue-700 text-white py-2 rounded-md text-center"
                 type="submit"
+                onClick={notify}
               >
                 Kirim
-              </Button>
+                <ToastContainer />
+              </a>
             </form>
           </div>
         </Modal.Body>
