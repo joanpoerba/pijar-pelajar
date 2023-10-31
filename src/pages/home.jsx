@@ -23,6 +23,8 @@ import ReasonCard from "../components/cards";
 import MentorCard from "../components/mentorCard";
 import Faq from "../components/faq";
 
+import { Link } from "react-router-dom";
+
 const Home = () => {
   const [scroll, scrollValue] = useState(0);
   const [promoStatus, setPromoStatus] = useState(true);
@@ -148,7 +150,10 @@ const Home = () => {
             <span className="customUnderline">modern</span>.
           </p>
           <div className="flex flex-row justify-center items-center mt-3">
-            <a href="#courses" className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-full py-2 px-6 md:text-[18px] es:text-[12px] font-semibold text-white shadow-xl shadow-blue-200">
+            <a
+              href="#courses"
+              className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-full py-2 px-6 md:text-[18px] es:text-[12px] font-semibold text-white shadow-xl shadow-blue-200"
+            >
               Enroll course now
             </a>
           </div>
@@ -200,7 +205,6 @@ const Home = () => {
                   ref={countupRef3}
                   onClick={() => {
                     countUpAnim3.reset();
-                    // countupAnim.start();
                   }}
                 >
                   0
@@ -265,15 +269,21 @@ const Home = () => {
               </li>
               <li className="text-white flex items-center">
                 <BsCheck className="text-2xl bg-white text-blue-600 rounded-full" />
-                <p className="ms-2 sm:text-[20px] es:text-base">Membuka keran sumber income</p>
+                <p className="ms-2 sm:text-[20px] es:text-base">
+                  Membuka keran sumber income
+                </p>
               </li>
               <li className="text-white flex items-center">
                 <BsCheck className="text-2xl bg-white text-blue-600 rounded-full" />
-                <p className="ms-2 sm:text-[20px] es:text-base">Menambah relasi baru</p>
+                <p className="ms-2 sm:text-[20px] es:text-base">
+                  Menambah relasi baru
+                </p>
               </li>
               <li className="text-white flex items-center">
                 <BsCheck className="text-2xl bg-white text-blue-600 rounded-full" />
-                <p className="ms-2 sm:text-[20px] es:text-base">Mendapat project freelance</p>
+                <p className="ms-2 sm:text-[20px] es:text-base">
+                  Mendapat project freelance
+                </p>
               </li>
               <li className="text-white flex items-center">
                 <BsCheck className="text-2xl bg-white text-blue-600 rounded-full" />
@@ -282,9 +292,11 @@ const Home = () => {
                 </p>
               </li>
               <li className="mt-5">
-                <button className="w-full py-2 bg-white text-blue-600 font-bold sm:text-[20px] es:text-base rounded-full">
-                  Pelajari selengkapnya
-                </button>
+                <Link to="/career">
+                  <button className="w-full py-2 bg-white text-blue-600 font-bold sm:text-[20px] es:text-base rounded-full">
+                    Pelajari selengkapnya
+                  </button>
+                </Link>
               </li>
             </ul>
           </div>

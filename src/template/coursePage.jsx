@@ -71,7 +71,7 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
         <Link className="absolute" to="/">
           <BsX className="w-10 h-10 text-slate-700" />
         </Link>
-        <main className="flex justify-center py-20 sm:pb-96">
+        <main className="flex justify-center py-20">
           <section className="w-[1200px] flex flex-col items-center">
             <p className="sm:text-3xl text-xl font-bold text-slate-700 text-center">
               Kelas online : <br />{" "}
