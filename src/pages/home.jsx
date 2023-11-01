@@ -380,9 +380,9 @@ const Home = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="">
+                  <p className="lg:text-xl text-md text-white" href="">
                     Career support
-                  </a>
+                  </p>
                 </li>
                 <li>
                   <a className="lg:text-xl text-md text-white" href="#mentor">
@@ -390,9 +390,9 @@ const Home = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="">
+                  <p className="lg:text-xl text-md text-white" href="">
                     Vacancy
-                  </a>
+                  </p>
                 </li>
                 <li>
                   <a className="lg:text-xl text-md text-white" href="#faq">
@@ -405,24 +405,24 @@ const Home = () => {
               <ul className="flex flex-col gap-y-3">
                 <strong className="text-2xl text-white">Program</strong>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="#courses">
+                  <p className="lg:text-xl text-md text-white">
                     Kolaborasi Kampus Merdeka
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="">
+                  <p className="lg:text-xl text-md text-white" href="">
                     Skill Akselebrasi
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="#mentor">
+                  <p className="lg:text-xl text-md text-white">
                     Talenta Digital
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="">
+                  <p className="lg:text-xl text-md text-white" href="">
                     Pelatihan
-                  </a>
+                  </p>
                 </li>
               </ul>
             </nav>
@@ -430,14 +430,14 @@ const Home = () => {
               <ul className="flex flex-col gap-y-3">
                 <strong className="text-2xl text-white">Komunitas</strong>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="#courses">
+                  <p className="lg:text-xl text-md text-white">
                     Para Pijar Pelajar
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="">
+                  <p className="lg:text-xl text-md text-white" href="">
                     Pelatih Talenta Digital
-                  </a>
+                  </p>
                 </li>
               </ul>
             </nav>
@@ -445,29 +445,29 @@ const Home = () => {
               <ul className="flex flex-col gap-y-3">
                 <strong className="text-2xl text-white">Cabang</strong>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="#courses">
+                  <p className="lg:text-xl text-md text-white">
                     Medan
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="">
+                  <p className="lg:text-xl text-md text-white" href="">
                     Lampung
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="">
+                  <p className="lg:text-xl text-md text-white" href="">
                     Jakarta
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="">
+                  <p className="lg:text-xl text-md text-white" href="">
                     Surabaya
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a className="lg:text-xl text-md text-white" href="">
+                  <p className="lg:text-xl text-md text-white" href="">
                     Bali
-                  </a>
+                  </p>
                 </li>
               </ul>
             </nav>
