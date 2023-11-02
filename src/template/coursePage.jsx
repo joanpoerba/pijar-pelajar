@@ -7,7 +7,6 @@ import { AiFillPlayCircle } from "react-icons/ai";
 
 import { Link } from "react-router-dom";
 
-import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
 
 import { Flowbite, Button, Modal } from "flowbite-react";
@@ -16,63 +15,6 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
 const CoursePage = ({ title, release, link, deskripsi, tools, harga }) => {
-  const driverObj = driver({
-    showProgress: true,
-    steps: [
-      {
-        popover: {
-          title: "Mohon dipahami",
-        },
-      },
-      {
-        element: "#releaseDate",
-        popover: {
-          title: "Release date",
-          description: "Bulan rilis nya course ini",
-          side: "left",
-          align: "start",
-        },
-      },
-      {
-        element: "#benefit",
-        popover: {
-          title: "Benefit",
-          description:
-            "Sertifikat, Video materi, Module, Konsultasi, merupakan benefit yang akan kamu dapatkan",
-          side: "bottom",
-          align: "start",
-        },
-      },
-      {
-        element: "#video",
-        popover: {
-          title: "Video Trailer",
-          description:
-            "Tonton video trailer untuk course ini sebagai perkenalan",
-          side: "bottom",
-          align: "start",
-        },
-      },
-      {
-        element: "#materi",
-        popover: {
-          title: "Materi",
-          description:
-            "Merupakan video materi yang akan kamu pelajari selama mengambil course",
-          side: "left",
-          align: "start",
-        },
-      },
-      {
-        popover: {
-          title: "Terimakasih, selamat belajar",
-        },
-      },
-    ],
-  });
-
-  driverObj.drive();
-
   const customTheme = {
     button: {
       color: {
@@ -91,7 +33,7 @@ const CoursePage = ({ title, release, link, deskripsi, tools, harga }) => {
       icon: "success",
       title: "Pembayaran Berhasil!",
       text: `Terimakasih sudah membeli kelas ${title}!`,
-      footer: 'Selamat belajar',
+      footer: "Selamat belajar",
     });
   };
 
@@ -297,7 +239,11 @@ const CoursePage = ({ title, release, link, deskripsi, tools, harga }) => {
               type="text"
               placeholder="Tanggal"
             />
-            <input className="sm:w-[90px] w-full" type="text" placeholder="CCV" />
+            <input
+              className="sm:w-[90px] w-full"
+              type="text"
+              placeholder="CCV"
+            />
           </div>
           <div className="flex justify-between items-end font-semibold">
             <p>Total</p>
