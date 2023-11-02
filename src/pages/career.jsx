@@ -12,6 +12,7 @@ const Career = () => {
       },
     },
   };
+
   return (
     <>
       <div className="w-full flex justify-center bg-gradient-to-b from-blue-500 to-blue-800 md:p-0 sm:p-8 p-4">

@@ -11,6 +11,7 @@ const course = () => {
         deskripsi:
           "Desain UI/UX untuk Pemula hingga Mahir adalah panduan komprehensif yang mengajarkan prinsip-prinsip dasar dan teknik canggih dalam desain antarmuka pengguna (UI) dan pengalaman pengguna (UX). Bagi pemula, kursus ini memberikan dasar-dasar desain grafis dan interaksi pengguna, sementara bagi para profesional berpengalaman, kursus ini akan membantu meningkatkan keterampilan dalam merancang pengalaman pengguna yang menarik dan intuitif. Anda akan belajar tentang pemilihan warna, tipografi, hierarki informasi, dan pengujian pengguna, semua yang diperlukan untuk menciptakan desain UI/UX yang luar biasa.",
         tools: [["Figma", "/assets/figma.png"]],
+        harga: "Rp150.000",
       },
       html_css_dan_js_dom_untuk_pemula: {
         id: "html_css_dan_js_dom_untuk_pemula",
@@ -23,6 +24,7 @@ const course = () => {
           ["Visual Studio Code", "/assets/vsc.png"],
           ["Node Js", "/assets/nodejs.png"],
         ],
+        harga: "Rp75.000",
       },
     },
     backEnd: {
@@ -38,6 +40,7 @@ const course = () => {
           ["MySql", "/assets/mysql.png"],
           ["XAMPP", "/assets/xampp.png"],
         ],
+        harga: "Rp200.000",
       },
       berkenalan_dengan_nextjs_chakraui_expressjs_mongodb: {
         id: "berkenalan_dengan_nextjs_chakraui_expressjs_mongodb",
@@ -51,6 +54,7 @@ const course = () => {
           ["Express Js", "/assets/expressjs.png"],
           ["Mongo DB", "/assets/mongodb.png"],
         ],
+        harga: "Rp120.000",
       },
       fullstack_webapp_cuaca_dengan_django_python: {
         id: "fullstack_webapp_cuaca_dengan_django_python",
@@ -63,6 +67,7 @@ const course = () => {
           ["Visual Studio Code", "/assets/vsc.png"],
           ["DJango", "/assets/django.png"],
         ],
+        harga: "Rp250.000",
       },
       membuat_dashboard_admin_dengan_codeigniter_3: {
         id: "membuat_dashboard_admin_dengan_codeigniter_3",
@@ -76,6 +81,7 @@ const course = () => {
           ["Composer", "/assets/composer.png"],
           ["Codeigniter", "/assets/codeigniter.png"],
         ],
+        harga: "Rp300.000",
       },
     },
     devOps: {
@@ -87,6 +93,7 @@ const course = () => {
         deskripsi:
           "Mendeploy proyek dengan Cloudflare adalah suatu proses penting dalam menghadirkan aplikasi atau situs web secara online. Cloudflare adalah layanan Content Delivery Network (CDN) dan keamanan web yang memungkinkan pengguna untuk mempercepat pengiriman konten mereka ke pengguna di seluruh dunia, serta memberikan lapisan keamanan tambahan untuk melindungi proyek dari ancaman cyber. Dengan mendeploy proyek menggunakan Cloudflare, pengguna dapat meningkatkan kinerja, kecepatan, serta keamanan aplikasi mereka. Cloudflare menyediakan berbagai fitur termasuk caching, optimisasi gambar, perlindungan DDoS, dan manajemen DNS yang dapat membantu meningkatkan pengalaman pengguna dan menjaga proyek tetap aman dari serangan online. Ini adalah langkah penting dalam memastikan bahwa proyek berjalan lancar, aman, dan dapat diakses dengan cepat oleh pengguna di seluruh dunia.",
         tools: [["Cloud Flare", "/assets/cloudflare.png"]],
+        harga: "Rp100.000",
       },
       mendalami_cloud_computing_dengan_azure: {
         id: "mendalami_cloud_computing_dengan_azure",
@@ -96,6 +103,7 @@ const course = () => {
         deskripsi:
           "Mendalami Cloud Computing dengan Azure adalah langkah yang penting dan menarik dalam memahami dan menguasai layanan komputasi awan yang disediakan oleh Microsoft Azure. Azure adalah platform komputasi awan yang menyediakan berbagai layanan untuk hosting, pengelolaan, dan skalabilitas aplikasi dan layanan di lingkungan cloud. Melalui eksplorasi lebih mendalam, individu dapat memahami konsep dasar cloud computing, termasuk infrastruktur sebagai layanan (IaaS), platform sebagai layanan (PaaS), dan perangkat lunak sebagai layanan (SaaS), serta bagaimana Azure menyediakan solusi untuk kebutuhan komputasi, penyimpanan, dan pengelolaan data. Dengan memahami dan menguasai Azure, seseorang dapat membangun, mengelola, dan mengoptimalkan solusi cloud yang efisien untuk berbagai kebutuhan bisnis dan proyek teknologi.",
         tools: [["Azure", "/assets/azure.png"]],
+        harga: "Rp130.000",
       },
       setting_aws_laravel_10_untuk_intermidate: {
         id: "setting_aws_laravel_10_untuk_intermidate",
@@ -109,6 +117,7 @@ const course = () => {
           ["AWS", "/assets/aws.png"],
           ["Laravel", "/assets/laravel.png"],
         ],
+        harga: "Rp230.000",
       },
     },
   };
@@ -130,6 +139,7 @@ const course = () => {
           link={courses.frontEnd[course].link}
           deskripsi={courses.frontEnd[course].deskripsi}
           tools={courses.frontEnd[course].tools}
+          harga={courses.frontEnd[course].harga}
         />
       );
     }
@@ -148,6 +158,7 @@ const course = () => {
           link={courses.backEnd[course].link}
           deskripsi={courses.backEnd[course].deskripsi}
           tools={courses.backEnd[course].tools}
+          harga={courses.backEnd[course].harga}
         />
       );
     }
@@ -166,6 +177,7 @@ const course = () => {
           link={courses.devOps[course].link}
           deskripsi={courses.devOps[course].deskripsi}
           tools={courses.devOps[course].tools}
+          harga={courses.devOps[course].harga}
         />
       );
     }

@@ -1,69 +1,99 @@
+import { useState } from "react";
+
 import { BsX } from "react-icons/bs";
 import { ImCalendar } from "react-icons/im";
 import { BiCheckCircle } from "react-icons/bi";
 import { AiFillPlayCircle } from "react-icons/ai";
+
 import { Link } from "react-router-dom";
 
 import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
 
-const CoursePage = ({ title, release, link, deskripsi, tools }) => {
-  const driverObj = driver({
-    showProgress: true,
-    steps: [
-      {
-        popover: {
-          title: "Mohon dipahami",
-        },
-      },
-      {
-        element: "#releaseDate",
-        popover: {
-          title: "Release date",
-          description: "Bulan rilis nya course ini",
-          side: "left",
-          align: "start",
-        },
-      },
-      {
-        element: "#benefit",
-        popover: {
-          title: "Benefit",
-          description:
-            "Sertifikat, Video materi, Module, Konsultasi, merupakan benefit yang akan kamu dapatkan",
-          side: "bottom",
-          align: "start",
-        },
-      },
-      {
-        element: "#video",
-        popover: {
-          title: "Video Trailer",
-          description:
-            "Tonton video trailer untuk course ini sebagai perkenalan",
-          side: "bottom",
-          align: "start",
-        },
-      },
-      {
-        element: "#materi",
-        popover: {
-          title: "Materi",
-          description:
-            "Merupakan video materi yang akan kamu pelajari selama mengambil course",
-          side: "left",
-          align: "start",
-        },
-      },
-      {
-        popover: {
-          title: "Terimakasih, selamat belajar",
-        },
-      },
-    ],
-  });
+import { Flowbite, Button, Modal } from "flowbite-react";
 
-  driverObj.drive();
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const CoursePage = ({ title, release, link, deskripsi, tools, harga }) => {
+  // const driverObj = driver({
+  //   showProgress: true,
+  //   steps: [
+  //     {
+  //       popover: {
+  //         title: "Mohon dipahami",
+  //       },
+  //     },
+  //     {
+  //       element: "#releaseDate",
+  //       popover: {
+  //         title: "Release date",
+  //         description: "Bulan rilis nya course ini",
+  //         side: "left",
+  //         align: "start",
+  //       },
+  //     },
+  //     {
+  //       element: "#benefit",
+  //       popover: {
+  //         title: "Benefit",
+  //         description:
+  //           "Sertifikat, Video materi, Module, Konsultasi, merupakan benefit yang akan kamu dapatkan",
+  //         side: "bottom",
+  //         align: "start",
+  //       },
+  //     },
+  //     {
+  //       element: "#video",
+  //       popover: {
+  //         title: "Video Trailer",
+  //         description:
+  //           "Tonton video trailer untuk course ini sebagai perkenalan",
+  //         side: "bottom",
+  //         align: "start",
+  //       },
+  //     },
+  //     {
+  //       element: "#materi",
+  //       popover: {
+  //         title: "Materi",
+  //         description:
+  //           "Merupakan video materi yang akan kamu pelajari selama mengambil course",
+  //         side: "left",
+  //         align: "start",
+  //       },
+  //     },
+  //     {
+  //       popover: {
+  //         title: "Terimakasih, selamat belajar",
+  //       },
+  //     },
+  //   ],
+  // });
+
+  // driverObj.drive();
+
+  const customTheme = {
+    button: {
+      color: {
+        white: "text-blue-600 bg-white border border-transparent",
+        blue: "text-white bg-blue-600 border border-transparent",
+      },
+    },
+  };
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const MySwal = withReactContent(Swal);
+
+  const paymentSuccess = () => {
+    MySwal.fire({
+      icon: "success",
+      title: "Pembayaran Berhasil!",
+      text: `Terimakasih sudah membeli kelas ${title}!`,
+      footer: 'Selamat belajar',
+    });
+  };
 
   return (
     <>
@@ -157,7 +187,9 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
                         >
                           <div className="flex items-center gap-x-2">
                             <AiFillPlayCircle className="text-3xl text-blue-600" />
-                            <span className="lg:text-md text-sm">Pengenalan Kelas</span>
+                            <span className="lg:text-md text-sm">
+                              Pengenalan Kelas
+                            </span>
                           </div>
                           <span className="lg:text-md text-sm">12 mins</span>
                         </a>
@@ -169,7 +201,9 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
                         >
                           <div className="flex items-center gap-x-2">
                             <AiFillPlayCircle className="text-3xl text-blue-600" />
-                            <span className="lg:text-md text-sm">Prepare Tools</span>
+                            <span className="lg:text-md text-sm">
+                              Prepare Tools
+                            </span>
                           </div>
                           <span className="lg:text-md text-sm">22 mins</span>
                         </a>
@@ -181,15 +215,23 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
                         >
                           <div className="flex items-center gap-x-2">
                             <AiFillPlayCircle className="text-3xl text-blue-600" />
-                            <span className="lg:text-md text-sm">54 video lainnya</span>
+                            <span className="lg:text-md text-sm">
+                              54 video lainnya
+                            </span>
                           </div>
                         </a>
                       </li>
                     </ul>
                   </div>
-                  <button className="w-full bg-white rounded-md py-3 font-semibold text-blue-600">
-                    Gabung Kelas
-                  </button>
+                  <Flowbite theme={{ theme: customTheme }}>
+                    <Button
+                      color="white"
+                      onClick={() => setOpenModal(true)}
+                      className="w-full bg-white rounded-md font-semibold text-blue-600"
+                    >
+                      Gabung Kelas
+                    </Button>
+                  </Flowbite>
                 </div>
                 <div className="mt-10">
                   <p className="font-bold text-slate-700 text-2xl">Tools</p>
@@ -214,6 +256,65 @@ const CoursePage = ({ title, release, link, deskripsi, tools }) => {
           </section>
         </main>
       </div>
+      <Modal show={openModal} onClose={() => setOpenModal(false)}>
+        <Modal.Header>Metode pembayaran</Modal.Header>
+        <Modal.Body>
+          <div className="flex flex-row justify-between items-center gap-x-5">
+            <img
+              className="sm:w-14 sm:h-14 w-9 h-9 object-contain"
+              src="/assets/logoBca.png"
+              alt=""
+            />
+            <img
+              className="sm:w-14 sm:h-14 w-9 h-9 object-contain"
+              src="/assets/logoBri.png"
+              alt=""
+            />
+            <img
+              className="sm:w-14 sm:h-14 w-9 h-9 object-contain"
+              src="/assets/logoDana.png"
+              alt=""
+            />
+            <img
+              className="sm:w-14 sm:h-14 w-9 h-9 object-contain"
+              src="/assets/logoMandiri.png"
+              alt=""
+            />
+            <img
+              className="sm:w-14 sm:h-14 w-9 h-9 object-contain"
+              src="/assets/logoMega.png"
+              alt=""
+            />
+          </div>
+          <div className="flex flex-row flex-wrap gap-5 my-10">
+            <input
+              className="sm:w-[330px] w-full"
+              type="text"
+              placeholder="Nomor kartu"
+            />
+            <input
+              className="sm:w-[90px] w-full"
+              type="text"
+              placeholder="Tanggal"
+            />
+            <input className="sm:w-[90px] w-full" type="text" placeholder="CCV" />
+          </div>
+          <div className="flex justify-between items-end font-semibold">
+            <p>Total</p>
+            <p className="text-2xl">{harga}</p>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Flowbite theme={{ theme: customTheme }}>
+            <Button color="blue" onClick={paymentSuccess}>
+              Bayar
+            </Button>
+          </Flowbite>
+          <Button color="gray" onClick={() => setOpenModal(false)}>
+            Batal
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };
